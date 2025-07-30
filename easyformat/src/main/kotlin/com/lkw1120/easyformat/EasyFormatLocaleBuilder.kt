@@ -173,6 +173,15 @@ class EasyFormatLocaleBuilder internal constructor(
     }
     
     /**
+     * Adds day of month format.
+     * 
+     * @return EasyFormatFormatter with combined format
+     */
+    fun d(): EasyFormatFormatter {
+        return EasyFormatFormatter("d", locale)
+    }
+
+    /**
      * Adds weekday format.
      * 
      * @return EasyFormatFormatter with combined format

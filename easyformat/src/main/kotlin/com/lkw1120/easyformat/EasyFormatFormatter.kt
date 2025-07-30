@@ -235,6 +235,16 @@ class EasyFormatFormatter internal constructor(
     }
 
     /**
+     * Adds day of month to the current formatter.
+     * 
+     * @param locale locale to use for the day part (optional, uses current locale if not specified)
+     * @return new EasyFormatFormatter with combined format
+     */
+    fun d(locale: Locale? = null): EasyFormatFormatter {
+        return EasyFormatFormatter(skeleton + " d", locale ?: this.locale)
+    }
+
+    /**
      * Adds weekday format to the current formatter.
      * 
      * @param locale locale to use for the date part (optional, uses current locale if not specified)

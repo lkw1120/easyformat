@@ -202,6 +202,16 @@ object EasyFormat {
     }
 
     /**
+     * Day of month format (e.g., "30")
+     * 
+     * @param locale locale to use for formatting
+     * @return EasyFormatFormatter instance
+     */
+    fun d(locale: Locale): EasyFormatFormatter {
+        return EasyFormatFormatter("d", locale)
+    }
+
+    /**
      * Weekday format (e.g., "수")
      * 
      * @param locale locale to use for formatting
@@ -452,6 +462,7 @@ object EasyFormat {
      * Supported skeletons:
      * - y, yM, yMMM, yMMMM, yMd, yMMMd, yMMMEd, yMMMMd, yMMMMEd
      * - M, MMM, MMMM, Md, MMMd, MMMEd, MMMMd, MMMMEd
+     * - d (day of month)
      * - E, EEEE
      * - H, Hm, Hms, h, hm, hms, m, s, jm, jms
      * - z, zzzz, Z, ZZZZ (timezone)
