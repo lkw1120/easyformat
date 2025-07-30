@@ -362,6 +362,26 @@ class EasyFormatFormatter internal constructor(
         return EasyFormatFormatter(skeleton + " jms", locale ?: this.locale)
     }
 
+    /**
+     * Adds locale-specific time format without AM/PM to the current formatter.
+     * 
+     * @param locale locale to use for the time part (optional, uses current locale if not specified)
+     * @return new EasyFormatFormatter with combined format
+     */
+    fun Jm(locale: Locale? = null): EasyFormatFormatter {
+        return EasyFormatFormatter(skeleton + " Jm", locale ?: this.locale)
+    }
+
+    /**
+     * Adds locale-specific time format with seconds without AM/PM to the current formatter.
+     * 
+     * @param locale locale to use for the time part (optional, uses current locale if not specified)
+     * @return new EasyFormatFormatter with combined format
+     */
+    fun Jms(locale: Locale? = null): EasyFormatFormatter {
+        return EasyFormatFormatter(skeleton + " Jms", locale ?: this.locale)
+    }
+
     // Timezone chaining methods
     /**
      * Adds timezone abbreviation to the current formatter.

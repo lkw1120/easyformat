@@ -290,6 +290,24 @@ class EasyFormatLocaleBuilder internal constructor(
         return EasyFormatFormatter("jms", locale)
     }
 
+    /**
+     * Adds locale-specific time format without AM/PM.
+     * 
+     * @return EasyFormatFormatter with combined format
+     */
+    fun Jm(): EasyFormatFormatter {
+        return EasyFormatFormatter("Jm", locale)
+    }
+
+    /**
+     * Adds locale-specific time format with seconds without AM/PM.
+     * 
+     * @return EasyFormatFormatter with combined format
+     */
+    fun Jms(): EasyFormatFormatter {
+        return EasyFormatFormatter("Jms", locale)
+    }
+
     // Timezone format methods
     /**
      * Adds timezone abbreviation format.

@@ -331,6 +331,26 @@ object EasyFormat {
         return EasyFormatFormatter("jms", locale)
     }
 
+    /**
+     * Locale-specific time format without AM/PM (e.g., "3:30")
+     *
+     * @param locale locale to use for formatting
+     * @return EasyFormatFormatter instance
+     */
+    fun Jm(locale: Locale): EasyFormatFormatter {
+        return EasyFormatFormatter("Jm", locale)
+    }
+
+    /**
+     * Locale-specific time format with seconds without AM/PM (e.g., "3:30:45")
+     *
+     * @param locale locale to use for formatting
+     * @return EasyFormatFormatter instance
+     */
+    fun Jms(locale: Locale): EasyFormatFormatter {
+        return EasyFormatFormatter("Jms", locale)
+    }
+
     // Timezone formats
     /**
      * Timezone abbreviation format (e.g., "PST", "EST", "KST")
@@ -464,7 +484,7 @@ object EasyFormat {
      * - M, MMM, MMMM, Md, MMMd, MMMEd, MMMMd, MMMMEd
      * - d (day of month)
      * - E, EEEE
-     * - H, Hm, Hms, h, hm, hms, m, s, jm, jms
+     * - H, Hm, Hms, h, hm, hms, m, s, jm, jms, Jm, Jms
      * - z, zzzz, Z, ZZZZ (timezone)
      * - w, W (week)
      * - Q, QQQ, QQQQ (quarter)
